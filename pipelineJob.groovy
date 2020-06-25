@@ -1,18 +1,16 @@
 pipeline {
     agent any
-    triggers {
-        pollSCM '* * * * *'
-    }
+
     stages {
         stage('BUILD') {
             steps {
-                sh 'gradlew assemble'
+                echo 'BUILD STAGE'
             }
 
         }
         stage('TEST') {
             steps {
-                sh 'gradlew test'
+                echo 'TEST STAGE'
             }
 
         }
