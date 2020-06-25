@@ -13,7 +13,7 @@ project.version '1.0-SNAPSHOT'
 
 docker{
     name "${project.name}:${project.version}"
-    files "plugins.txt"
+    files "plugins.txt", "init-trigger-job.xml"
 }
 
 dockerRun{
